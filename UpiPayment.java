@@ -1,9 +1,9 @@
 package solid;
 
-public class UpiPayment extends Payment{
+public class UpiPayment implements Payment{
 
     @Override
-    public void paymentMode(int amount) {
-        System.out.println("Please pay "+amount+" through UPI");
+    public void makePayment() {
+        System.out.println("Pay through UPI");
     }
 }

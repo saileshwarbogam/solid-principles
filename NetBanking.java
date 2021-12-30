@@ -1,8 +1,10 @@
 package solid;
 
-public class NetBanking extends Payment{
+public class NetBanking implements Payment{
     @Override
-    public void paymentMode(int amount) {
-        System.out.println("Please pay "+amount+" through Net Banking ");
+    public void makePayment() {
+        System.out.println("Pay through Net Banking");
     }
+
+
 }

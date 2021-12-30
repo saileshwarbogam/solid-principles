@@ -1,6 +1,6 @@
 package solid;
 
-public class NormalUsers implements Users{
+public class NormalUser extends UserOperations implements Users {
 
     @Override
     public  String userType() {

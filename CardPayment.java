@@ -1,9 +1,10 @@
 package solid;
 
-public class CardPayment extends Payment{
+public class CardPayment implements Payment{
+
 
     @Override
-    public void paymentMode(int amount) {
-        System.out.println("Please pay " + amount);
+    public void makePayment() {
+        System.out.println("Pay through card");
     }
 }
