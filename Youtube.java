@@ -1,22 +1,23 @@
 package solid;
 
-import java.util.concurrent.CopyOnWriteArrayList;
-
 public class Youtube {
     public static void main(String[] args) {
 
         NormalUser user1 = new NormalUser();
+        //single responsibility
         user1.register("sailesh","1729");
         user1.login("sailesh","1729");
         user1.userType();
+
+        //Dependency Inversion
         Advertisements ads = new Advertisements();
         ads.showAdds(user1);
-
+        //open-closed
         Payment payment = new CardPayment();
         payment.makePayment();
 
 
-
+        //Interface segregation
         Playlists musicList = new MusicPlaylist();
         musicList.addVideos("Perfect by Ed Sheeran");
         musicList.addVideos("Dancing on my own by Calum");
@@ -39,6 +40,10 @@ public class Youtube {
             Recommendations suggestions = new Teenage();
             suggestions.showContent();
         }
+        //Liskov Substitution
+        TypeSearch search = new TypeSearch();
+        search.typeToSearch();
+
 
     }
 }
